@@ -31,14 +31,14 @@ async function newChartPoll(linkInjest) {
       function (data, textStatus, jqXHR) {  // success callback
           //alert('status: ' + textStatus + ', data:' + data);
           output1 = data.slice(106,-112);
-          console.log(output1);
+          //console.log(output1);
           document.getElementById("parse").innerHTML = output1;
           nameArray = []
           $('.pds-answer-text').each(function (i, row)
             {
                 
                 pollcatagory =   row.innerHTML
-                console.log(pollcatagory)
+                //console.log(pollcatagory)
                 nameArray.push(pollcatagory)
             })
 
@@ -53,7 +53,7 @@ $('.pds-question-top').each(function (i, row)
             $('.pds-feedback-per').each(function (i, row)
             {
                   pollscore = row.innerHTML.replace("&nbsp;", "").replace("%", "")
-                  console.log(pollscore)
+                  //console.log(pollscore)
                 scoreArray.push(pollscore)
                 //shuffleArray(scoreArray);
             })
